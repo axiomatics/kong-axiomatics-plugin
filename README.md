@@ -119,7 +119,7 @@ Stop Kong as well as remove Docker volume to be able to start from scratch
 </table>
 
 ## Author
-Initial author: Ioannis Iordanidis
+Initial author: Ioannis Iordanidis </br>
 Continued work by: Jonas Iggbom
 
 ## License
