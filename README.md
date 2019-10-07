@@ -48,33 +48,60 @@ docker-compose down -v
 
 ## Configuration
 
-<table><thead>
-<tr>
-<th>Form Parameter</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>config.pdp_url</code></td>
-<td>yes</td>
-<td></td>
-<td>The URL to which the plugin will make a JSON <code>POST</code> request before proxying the original request.</td>
-</tr>
-<tr>
-<td><code>config.token_header_name</code></td>
-<td>yes</td>
-<td>Authorization</td>
-<td>The name of the header that carries the JWT</td>
-</tr>
-<tr>
-<td><code>config.claims_to_include</code></td>
-<td>no</td>
-<td></td>
-<td>A list of strings that correspond to the claims we are interested in forwarding to the PDP from the JWT</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Form Parameter</th>
+      <th>Required</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>config.pdp_url</code></td>
+      <td>yes</td>
+      <td></td>
+      <td>The URL to which the plugin will make a JSON <code>POST</code> request before proxying the original request.</td>
+    </tr>
+    <tr>
+      <td><code>config.token_header_name</code></td>
+      <td>yes</td>
+      <td>Authorization</td>
+      <td>The name of the header that carries the JWT</td>
+    </tr>
+    <tr>
+      <td><code>config.claims_to_include</code></td>
+      <td>no</td>
+      <td></td>
+      <td>A list of strings that correspond to the claims we are interested in forwarding to the PDP from the JWT</td>
+    </tr>
+    <tr>
+      <td><code>config.pdp_username</code></td>
+      <td>yes</td>
+      <td></td>
+      <td>The user that is allowed to send a request to the PDP</td>
+    </tr>
+    <tr>
+      <td><code>config.pdp_password</code></td>
+      <td>yes</td>
+      <td></td>
+      <td>The password for the PDP user</td>
+    </tr>
+    <tr>
+      <td><code>config.url_parameter_matching</code></td>
+      <td>no</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>config.url_parameter_key</code></td>
+      <td>no</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Author
 Ioannis Iordanidis
