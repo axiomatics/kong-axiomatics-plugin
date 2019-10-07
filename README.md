@@ -22,28 +22,43 @@ You will also have to add the kong-axiomatics-plugin in your configuration file.
 If you are starting from the default kong.conf file uncomment the plugins key and add this one
 
 <pre>
-plugins = bundled, kong-axiomatics-plugin
+  plugins = bundled, kong-axiomatics-plugin
 </pre>
 
 Restart Kong using this configuration file and you're ready to go
 
 <pre>
-kong stop
-kong start -c /etc/kong/kong.conf
+  kong stop
+  kong start -c /etc/kong/kong.conf
 </pre>
 
 ### With docker
 
-Build and start Kong
+Start Kong
 
 <pre>
-docker-compose build --force-rm && docker-compose up -d
+  docker-compose up -d
+</pre>
+
+Check the log and make sure that Kong has started
+<pre>
+  docker-compose logs -f kong
+</pre>
+
+Add the Axiomatics plug-in
+<pre>
+  ./addCustomPlugin.sh
+</pre>
+
+Create a sample service
+<pre>
+  ./createExampleService.sh
 </pre>
 
 Stop Kong as well as remove Docker volume to be able to start from scratch
 
 <pre>
-docker-compose down -v
+  docker-compose down -v
 </pre>
 
 ## Configuration
@@ -104,20 +119,21 @@ docker-compose down -v
 </table>
 
 ## Author
-Ioannis Iordanidis
+Initial author: Ioannis Iordanidis
+Continued work by: Jonas Iggbom
 
 ## License
 <pre>
-The MIT License (MIT)
-=====================
+  The MIT License (MIT)
+  =====================
 
-Copyright (c) 2019 Ioannis P. Iordanidis
+  Copyright (c) 2019 Ioannis P. Iordanidis
 
-The software is provided "as is", without warranty of any kind, express or
-implied, including but not limited to the warranties of merchantability,
-fitness for a particular purpose and noninfringement. In no event shall the
-authors or copyright holders be liable for any claim, damages or other
-liability, whether in an action of contract, tort or otherwise, arising from,
-out of or in connection with the software or the use or other dealings in
-the software.
+  The software is provided "as is", without warranty of any kind, express or
+  implied, including but not limited to the warranties of merchantability,
+  fitness for a particular purpose and noninfringement. In no event shall the
+  authors or copyright holders be liable for any claim, damages or other
+  liability, whether in an action of contract, tort or otherwise, arising from,
+  out of or in connection with the software or the use or other dealings in
+  the software.
 </pre>
