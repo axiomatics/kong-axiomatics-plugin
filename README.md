@@ -13,7 +13,7 @@ Before proxying the request to an API upstream of Kong, this plugin will send a 
 Clone this repo
 
 <pre>
-$ git clone https://github.com/ioannis-iordanidis/kong-axiomatics-plugin
+$ git clone https://github.com/iggbom/kong-axiomatics-plugin
 $ cd kong-axiomatics-plugin
 $ luarocks make *.rockspec
 </pre>
