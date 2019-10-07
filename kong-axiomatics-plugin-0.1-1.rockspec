@@ -1,14 +1,14 @@
 package = "kong-axiomatics-plugin"
-version = "0.1-1"
+version = "0.2-1"
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "git@github.com:ioannis-iordanidis/kong-axiomatics-plugin.git",
+  url = "git@github.com:iggbom/kong-axiomatics-plugin.git",
   tag = "v0.1-1"
 }
 description = {
   summary = "Kong Axiomatics Integration",
   license = "Apache 2.0",
-  homepage = "https://github.com/ioannis-iordanidis/kong-axiomatics-plugin",
+  homepage = "https://github.com/iggbom/kong-axiomatics-plugin",
   detailed = [[
       Kong Axiomatics Integration.
   ]],
