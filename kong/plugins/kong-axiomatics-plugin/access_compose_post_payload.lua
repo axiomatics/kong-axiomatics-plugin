@@ -41,7 +41,6 @@ function _M.compose_post_payload(decoded_token, conf)
   if kong.request.get_method() == "GET" then
     kong.log.info("The method is: ", kong.request.get_method(), ". Setting action to view")
     action_attribute["Value"] = "view"
-
   end
   -- action_attribute["DataType"] = "anyURI"
   action["Attribute"] = action_attribute
@@ -52,7 +51,7 @@ function _M.compose_post_payload(decoded_token, conf)
   local resource = {}
   resource_attribute["AttributeId"] = "axiomatics.demo.resourceType"
   local p = string.sub(kong.request.get_path(), 2)
-  kong.log.info("The resource path is: ", string.sub(kong.request.get_path())
+  -- kong.log.info("The resource path is: ", string.sub(kong.request.get_path()))
   -- resource_attribute["Value"] = "record"
   resource_attribute["Value"] = p
   table.insert(resource_attribute_list, resource_attribute)
